@@ -1,0 +1,154 @@
+* {
+	margin: 0;
+	padding: 0;
+
+	box-sizing: border-box;
+	font-family: monospace;
+}
+#container {
+	position: relative;
+
+	overflow: hidden;
+
+	height: 100vh;
+	width: 100%;
+}
+
+#container .slider {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 500%;
+	height: 100%;
+
+	animation: slide 10s ease-in-out infinite;
+}
+
+#container .slider .slide {
+	position: relative;
+
+	width: 20%;
+	height: 100%;
+
+	float: left;
+}
+
+#container .slider .slide .contain {
+	position: absolute;
+	bottom: 60px;
+	left: 60px;
+	right: 60px;
+
+	padding: 30px;
+
+	background: rgba(0, 0, 0, 0.5);
+
+	box-sizing: border-box;
+
+	transition: 0.5s;
+}
+
+#container .slider .slide .contain h2 {
+	color: #fff;
+	margin: 0 0 20px;
+	padding: 0;
+
+	font-size: 48px;
+
+	transition: 0.5s;
+}
+
+#container .slider .slide .contain p {
+	color: #fff;
+
+	margin: 0;
+	padding: 0;
+
+	font-size: 18px;
+
+	transition: 0.5s;
+}
+
+#container .slider .slide1 {
+	background: url(pic1.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+#container .slider .slide2 {
+	background: url(pic2.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+#container .slider .slide3 {
+	background: url(pic5.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+#container .slider .slide4 {
+	background: url(pic4.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+#container .slider .slide5 {
+	background: url(pic1.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+@keyframes slide {
+	0% {
+		left: 0;
+	}
+	20% {
+		left: 0;
+	}
+	25% {
+		left: -100%;
+	}
+	45% {
+		left: -100%;
+	}
+	50% {
+		left: -200%;
+	}
+	70% {
+		left: -200%;
+	}
+	75% {
+		left: -300%;
+	}
+	95% {
+		left: -300%;
+	}
+
+	100% {
+		left: -400%;
+	}
+}
+
+@media (max-width: 768px) {
+	#container .slider .slide .contain {
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+		right: 20px;
+
+		padding: 20px;
+	}
+
+	#container .slider .slide .contain h2 {
+		color: #fff;
+
+		margin: 0 0 10px;
+
+		font-size: 30px;
+	}
+
+	#container .slider .slide .contain p {
+		color: #fff;
+
+		font-size: 16px;
+	}
+}
